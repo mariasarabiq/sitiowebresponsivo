@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa de asignatura programación web</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+        h2 {
+            text-align: center;
+        }
+        header, nav, main, section, article, aside {
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+        }
+        header {
+            background: #003b71;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+        }
+        header p {
+            font-size: 0.9em;
+            margin: 0 0 5px 0;
+            opacity: 0.8;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            background: #0055aa; 
+            margin-top: 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            gap: 5px;
+        }
+        nav li {
+            text-align: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: background 0.3s;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        section {
+            flex: none; 
+            background: #ffffff;
+        } 
+        div#proposito {
+            background: #dad4f7;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border-left: 5px solid #003b71; 
+        }  
+        article {
+            background: #e6f0ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border-left: 5px solid #003366;
+        }
+        article ul {
+            list-style: disc;
+            margin-left: 20px;
+            padding-left: 0;
+        }
+        article h3 {
+            color: #003366;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+        aside {
+            flex: none;
+            max-width: none;
+            background: #a4cbff; 
+        }
+        aside ul {
+            list-style: none;
+            padding: 0;
+            text-align: center; 
+            display: block;
+        }
+        aside li {
+            margin-bottom: 5px;
+        }
+        aside figure {
+            text-align: center;
+            margin: 10px auto;
+        }
+        aside figure img {
+            max-width: 100%; 
+            height: auto;
+        }
+        .video-container {
+            max-width: 90%; 
+            margin: 0 auto;
+        }
+        .video-container iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            height: auto;
+            border-radius: 8px; 
+            border: none;
+        }
+        footer {
+            background-color: #003b71;
+            color: #a2a2a2;
+            padding: 48px 0; 
+            margin-top: 48px; 
+        }
+        .container {
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 15px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr; 
+            gap: 32px; 
+            margin-bottom: 32px; 
+            text-align: center;
+        }
+        .footer-col h4 {
+            font-size: 18px; 
+            font-weight: bold;
+            color: #ffffff; 
+            margin-bottom: 16px; 
+            border-bottom: 2px solid #0055a4; 
+            padding-bottom: 8px; 
+        }
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-col li {
+            margin-bottom: 12px; 
+        }
+        .footer-col a {
+            color: #a2a2a2; 
+            text-decoration: none;
+            transition: color 0.3s; 
+        }
+        .footer-col a:hover {
+            color: #ffffff; 
+        }           
+        .footer-bottom {
+            text-align: center;
+            padding-top: 32px; 
+            border-top: 1px solid #ffffff;
+            font-size: 14px; 
+        }   
+        
+
+        @media (min-width: 601px) {
+            nav ul {
+                flex-direction: row;
+            }
+            nav li {
+                text-align: initial;
+            }
+            main {
+                flex-direction: column;
+            }
+            aside {
+                order: initial; 
+                max-width: none;
+            }
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                text-align: left;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            main {
+                flex-direction: row;
+            }
+            aside {
+                flex: 1;
+                max-width: 300px;
+            }
+            section {
+                flex: 3;
+            }
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        } 
+    </style>
+</head>
+<body>
+    <header>
+        <p>INGENIERÍA EN TECNOLOGÍAS DE LA INFORMACIÓN / INGENIERÍA EN SISTEMAS COMPUTACIONALES EN COMPETENCIAS PROFESIONALES</p>
+        <h1>ASIGNATURA DE PROGRAMACIÓN WEB</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#proposito">Propósito</a></li>
+            <li><a href="#unidad1">Unidad I</a></li>
+            <li><a href="#unidad2">Unidad II</a></li>
+            <li><a href="#unidad3">Unidad III</a></li>
+            <li><a href="#unidad4">Unidad IV</a></li>
+            <li><a href="#video-intro">Video</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <div id="proposito">
+                <h2>Propósito de aprendizaje de la asignatura</h2>
+                <p>El alumno implementará sistemas empleando tecnologías web para extender la disponibilidad y
+                    alcances de los servicios de la organización.
+                </p>
+            </div>
+
+            <h2>Unidades de aprendizaje y temas</h2>
+
+            <article id="unidad1">
+                <h3>I. Introducción a los sistemas web</h3>
+                <ul>
+                    <li>Introducción a la programación web.</li>
+                    <li>Configuración de servidores de desarrollo web.</li>
+                    <li>Configuración de servidor de producción.</li>
+                </ul>
+            </article>
+            
+            <article id="unidad2">
+                <h3>II. Programación del lado del cliente</h3>
+                <ul>
+                    <li>Maquetación.</li>
+                    <li>Hojas de estilo.</li>
+                    <li>JavaScript.</li>
+                </ul>
+            </article>
+            
+            <article id="unidad3">
+                <h3>III. Programación del lado del servidor</h3>
+                <ul>
+                    <li>Introducción a la programación del lado del servidor.</li>
+                    <li>Interfaz de programación de aplicaciones y programación de tres niveles.</li>
+                    <li>Acceso a servicios.</li>
+                    <li>Monitoreo y estadísticas del sistema web.</li>
+                </ul>
+            </article>
+            
+            <article id="unidad4">
+                <h3>IV. Autenticación de usuarios</h3>
+                <ul>
+                    <li>Autentificación e interfaces seguras.</li>
+                    <li>Manejo de excepciones.</li>
+                </ul>
+            </article>
+
+        </section>
+    
+        <aside>
+            <h2>Detalles del Programa</h2>
+            <ul>
+                <li><strong>Cuatrimestre:</strong> Séptimo </li>
+                <li><strong>Modalidad:</strong> Presencial</li>
+                <li><strong>Total de horas:</strong> 75 </li>
+                <li><strong>Horas por semana:</strong> 5 </li>
+            </ul>
+
+            <figure>
+                <picture>
+                    <source media="(max-width: 600px)" srcset="imagenes/programacionweb_small.png">
+                    <source media="(max-width: 1024px)" srcset="imagenes/programacionweb_medium.png">
+                    <img src="imagenes/programacionweb_large.png" alt="PROGRAMACION WEB" style="width:280px;">
+                </picture>
+            </figure>
+
+            <figure>
+                <picture>
+                    <source media="(max-width: 600px)" srcset="imagenes/logoUPSIN_small.png">
+                    <source media="(max-width: 1024px)" srcset="imagenes/logoUPSIN_medium.png">                    
+                    <img src="imagenes/logoUPSIN_large.png" alt="LOGO UNIVERSIDAD" style="width:250px;">
+                </picture>
+            </figure> 
+        </aside>
+    </main>
+ 
+    <section id="video-intro">
+        <h2>Video sobre la carrera</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/cDNMe56I8LU?si=rjXP_L5vGRWMRV-y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="#proposito">Propósito de Aprendizaje</a></li>
+                        <li><a href="#unidad1">Unidad I: Introducción a los sistemas web</a></li>
+                        <li><a href="#unidad2">Unidad II: Programación del lado del cliente</a></li>
+                        <li><a href="#unidad3">Unidad III: Programación del lado del servidor</a></li>
+                        <li><a href="#unidad4">Unidad IV: Autenticación de usuarios</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Información de Universidad</h4>
+                    <ul>
+                        <li>Teléfono: (669) 180 0695</li>
+                        <li>Coordinación de Ingeniería en TI</li>
+                        <li><a href="https://maps.app.goo.gl/KNE8QYjHRxBGgTbv9" target="_blank">Carretera Municipal Libre Mazatlán Higueras Km 3 Colonia Genaro Estrada C.P. 82199 Mazatlán, Sinaloa; México.</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Documento del Programa Educativo UPSIN: Ingeniería en Tecnologías de la Información / Sistemas Computacionales. © 2025.</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
+
